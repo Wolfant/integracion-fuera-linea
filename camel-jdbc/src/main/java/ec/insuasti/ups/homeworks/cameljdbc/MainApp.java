@@ -2,13 +2,11 @@ package ec.insuasti.ups.homeworks.cameljdbc;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.dataformat.bindy.csv.BindyCsvDataFormat;
 import org.apache.camel.impl.DefaultCamelContext;
-import org.apache.camel.model.dataformat.CsvDataFormat;
 import org.apache.camel.support.DefaultRegistry;
 import org.apache.commons.dbcp.*;
 import javax.sql.DataSource;
-import org.apache.camel.spi.DataFormat;
+
 
 public class MainApp {
 
