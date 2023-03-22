@@ -44,7 +44,7 @@ public class MainApp {
 
         public void configure() {
 
-            //from("timer://runOnce?repeatCount=1&delay=1").startupOrder(1).process(new InitializerProcessor()).to("stream:out").to("jdbc:myDataSource").end();
+            from("timer://runOnce?repeatCount=1&delay=1").startupOrder(1).process(new InitializerProcessor()).to("stream:out").to("jdbc:myDataSource").end();
             
             from("sftp:localhost:2222/document/?noop=true&username=user&password=passwd").startupOrder(2)
             .to("file:src/data/?noop=True&fileName=cardsclients.csv").end();
